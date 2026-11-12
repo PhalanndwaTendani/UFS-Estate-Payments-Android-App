@@ -1,0 +1,14 @@
+Gradle JDK requirement
+======================
+This project uses Gradle 8.11.1 + Android Gradle Plugin 8.7.3.
+
+Supported Gradle JVMs: Java 17 or Java 21 (recommended: 17).
+Java 25 is NOT supported by this Gradle version.
+
+In Android Studio:
+  File → Settings (or Android Studio → Settings on macOS)
+  → Build, Execution, Deployment → Build Tools → Gradle
+  → Gradle JDK → select "jbr-17" (JetBrains Runtime 17) or any installed JDK 17 / 21
+  → Apply → Sync Project with Gradle Files
+
+Do NOT select JDK 25 for Gradle.

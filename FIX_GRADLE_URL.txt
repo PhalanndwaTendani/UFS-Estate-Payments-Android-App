@@ -1,0 +1,25 @@
+If you see: Illegal char <:> at index 5: file/:/C:/Gradle_v8.10.2.zip
+================================================================
+
+Your PC is NOT using this project's Gradle wrapper.
+Something is forcing a broken local path:  file/:/C:/Gradle_v8.10.2.zip
+
+FIXED IN THIS PROJECT:
+  gradle/wrapper/gradle-wrapper.properties  uses:
+  https://services.gradle.org/distributions/gradle-8.11.1-bin.zip
+
+WHAT TO DO ON WINDOWS (Android Studio):
+1. File → Close Project
+2. Delete folder:  C:\Users\<YOU>\.gradle\wrapper\dists
+   (optional but helps clear bad cache)
+3. Open this ufs_app folder again
+4. File → Settings → Build, Execution, Deployment → Build Tools → Gradle
+5. Set:
+   - Gradle JDK:  jbr-17
+   - Use Gradle from:  'gradle-wrapper.properties' file   ← important
+   - Do NOT choose "Specified location" pointing at C:\Gradle_v8.10.2.zip
+6. Apply → OK
+7. File → Sync Project with Gradle Files
+
+If the error remains, search Windows for a file named "Gradle_v8.10.2"
+and stop pointing Android Studio at it.
